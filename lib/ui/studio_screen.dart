@@ -189,7 +189,7 @@ class _Hands extends CustomPainter {
       }
       final r = a * math.pi / 180, dx = math.sin(r), dy = -math.cos(r);
       final p = Offset(e.x * s, e.y * s);
-      c.drawLine(p - Offset(dx, dy) * e.pivotX * s, p + Offset(dx, dy) * e.size * s,
+      c.drawLine(p - Offset(dx, dy) * (e.pivotX * s), p + Offset(dx, dy) * (e.size * s),
           Paint()..color = Color(e.color)..strokeWidth = (e.type == WType.secondHand ? 1.5 : 3.5) * s..strokeCap = StrokeCap.round);
     }
   }
